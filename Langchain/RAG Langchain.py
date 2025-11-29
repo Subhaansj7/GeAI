@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-API_KEY='AIzaSyCoAUd0PVuSckN4byUxhytGnMWb-tLamGQ'
+API_KEY='api key'
 
 docs=[
     Document(page_content="LangChain is a framework for developing applications powered by LLMs."),
@@ -43,5 +43,6 @@ rag_chain=(
 
 question="what is the purpose of Langchain Framework?"
 response=rag_chain.invoke(question)
+
 
 print(response)
