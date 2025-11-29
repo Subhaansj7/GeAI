@@ -4,7 +4,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 chat=ChatGoogleGenerativeAI(
     model='gemini-2.5-flash',
-    google_api_key='AIzaSyC2ULnL0oBfAfjEGGj6hl52aZ-oe2OcaMI'
+    google_api_key='your_apui_key'
 )
 
 output_parser= StrOutputParser()
@@ -17,5 +17,6 @@ prompt=ChatPromptTemplate.from_template(
 chain= prompt | chat | output_parser
 
 response=chain.invoke({'concept':'Recursion in programming'})
+
 
 print(response)
